@@ -1,0 +1,33 @@
+.contact {
+  padding-top: rem(180);
+  padding-bottom: rem(100);
+  background-color: var(--background);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__map {
+    height: rem(576);
+    margin: rem(80) 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+
+    &-title {
+      margin-bottom: rem(8);
+    }
+
+    span {
+      margin-top: rem(18);
+    }
+  }
+}

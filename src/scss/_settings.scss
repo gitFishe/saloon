@@ -1,0 +1,225 @@
+@function rem($size) {
+  $remSize: $size / $base-value;
+
+  @return #{$remSize}rem;
+}
+
+
+$header-height: 93px;
+$base-value: 16;
+
+
+html {
+  box-sizing: border-box;
+  scroll-padding-top: $header-height;
+  font-weight: 400;
+  line-height: rem(20);
+  letter-spacing: rem(1);
+}
+
+@media (max-width: 1400px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img, svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Links */
+
+a, a:link, a:visited {
+  color: inherit;
+  text-decoration: none;
+  // display: inline-block;
+}
+
+
+////a:hover  {
+////  @media(min-width: 992px){
+////    color: inherit;
+////    text-decoration: none;
+////  }
+//
+//}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* Form */
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+
+//////////////
+
+.container {
+  width: 100%;
+  max-width: rem(1296);
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &-mobile {
+    @media (max-width: 768px) {
+      min-width: 0 !important;
+      padding: 0 rem(40) !important;
+    }
+  }
+}
+
+
+.page__body {
+  color: #FFF;
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 86.4px */
+}
+
+.title {
+
+  &-1 {
+    & > * {
+      font-weight: 900;
+      font-size: rem(100);
+      line-height: rem(110);
+    }
+  }
+
+  &-2 {
+    & > * {
+      font-size: rem(62);
+      line-height: 150%;
+    }
+  }
+
+  &-3 {
+    & > * {
+      font-size: rem(23);
+      font-weight: 700;
+      line-height: rem(50);
+    }
+  }
+
+  &-4 {
+    & > * {
+      font-size: rem(26.5);
+      font-weight: 700;
+      line-height: rem(40);
+    }
+  }
+}
+
+.btn {
+  &:hover {
+
+  }
+}
+
+.mobile-hide {
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile-show {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+

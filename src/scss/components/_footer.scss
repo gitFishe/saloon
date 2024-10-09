@@ -1,0 +1,38 @@
+.footer {
+  background-color: var(--background);
+
+  &__top {
+    padding: rem(80) 0;
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white-transparent);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: rem(25);
+  }
+
+  &__block {
+    p:not(:last-of-type) {
+      margin-bottom: rem(15);
+    }
+
+    &-logo {
+      width: rem(60);
+      height: rem(60);
+    }
+
+    &-inst {
+      width: rem(36);
+      height: rem(36);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    opacity: .5;
+    padding: rem(30) 0;
+  }
+}

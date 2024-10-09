@@ -1,0 +1,142 @@
+.header {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vw;
+  overflow: hidden;
+
+  .burger {
+    &.stick {
+      position: absolute;
+      right: 267px;
+      transition: position var(--hover-transition);
+    }
+  }
+
+  .nav {
+    padding: rem(27) 0;
+    border-bottom: 1px solid var(--white-transparent);
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    li {
+      a {
+        transition: color 250ms ease-in-out;
+      }
+
+      a::after {
+        margin-top: rem(3);
+        display: block;
+        content: '';
+        border-bottom: 1px solid var(--accen);
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+      }
+
+      a:hover {
+        color: var(--accen);
+      }
+    }
+
+    .pacifier {
+      width: 32px;
+      height: 36.5px;
+      display: none;
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  &__icon {
+    width: rem(24);
+    height: rem(24);
+
+    &-start {
+      margin-bottom: rem(3);
+    }
+
+    &-big {
+      width: rem(40);
+      height: rem(40);
+    }
+
+    &-burger {
+      z-index: 100;
+      position: relative;
+      width: 32px;
+      height: 32px;
+      margin-bottom: rem(3);
+
+      span {
+        position: absolute;
+        width: 25px;
+        height: 3px;
+        background-color: var(--white);
+        left: rem(3.5);
+      }
+
+      span:nth-child(1) {
+        transform: translateY(-10px);
+      }
+
+      span:nth-child(3) {
+        transform: translateY(10px);
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    padding: 0 rem(80) 0 80px;
+    position: absolute;
+    height: 100vh;
+    width: 27%;
+    background-color: var(--background);
+    right: 0;
+    transform: translate(100%, 0);
+    top: 0;
+    transition: transform var(--hover-transition);
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 75%;
+      max-height: rem(700);
+      max-width: rem(400);
+
+      > :first-child p {
+        font-size: rem(20);
+        line-height: 130%;
+      }
+    }
+
+
+    ul {
+      > :first-child {
+        font-size: rem(28);
+        margin-bottom: rem(30);
+      }
+    }
+
+    p {
+      margin-top: rem(20);
+    }
+
+    &.active {
+      transform: none;
+    }
+  }
+}

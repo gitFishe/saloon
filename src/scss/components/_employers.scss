@@ -1,0 +1,39 @@
+.employers {
+  padding-top: rem(80);
+  padding-bottom: rem(100);
+  background-color: var(--background);
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(80);
+  }
+
+  &__list {
+    padding-left: rem(20);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    width: calc(100% / 3 - 30px);
+    margin-bottom: 100px;
+
+    &-img {
+      border: 1px solid var(--accen);
+      height: rem(477);
+
+      img {
+        transform: translateY(rem(20)) translateX(rem(-20));
+      }
+    }
+
+    p {
+      font-size: rem(24);
+      margin: rem(50) 0 rem(15) rem(-20);
+    }
+
+    span {
+      margin-left: rem(-20);
+    }
+  }
+}

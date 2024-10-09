@@ -1,0 +1,11 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+
+  // colors
+  --white: #fff;
+  --white-transparent: rgba(255, 255, 255, 0.5);
+  --background: #111;
+  --accen: #CDAA7D;
+  --hover-transition: .3s ease-in-out;
+}

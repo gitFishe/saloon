@@ -1,0 +1,56 @@
+.price {
+  padding-bottom: rem(100);
+  padding-top: rem(180);
+  background-color: var(--background);
+
+  &__title {
+    text-align: center;
+    margin-bottom: rem(80);
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(80);
+    }
+
+    &:nth-child(3n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__img {
+    height: rem(536);
+
+    width: 49%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: rem(526);
+    width: 40%;
+    padding-bottom: rem(32);
+  }
+
+  &__service {
+    border-bottom: 1px solid var(--white-transparent);
+    padding-top: rem(32);
+    font-size: rem(24);
+
+    > p {
+      font-size: rem(18);
+      margin-top: rem(20);
+      margin-bottom: rem(25);
+    }
+
+    &-block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
